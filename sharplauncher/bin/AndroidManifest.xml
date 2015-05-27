@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sharp.sharplauncher"
+    android:versionCode="2"
+    android:versionName="1.1" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!-- 在sdcard中创建/删除文件的权限 -->
+    <uses-permission android:name="android.permission.WRITE_USER_DICTIONARY" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <application
+        android:name="com.home.application.BaseApp"
+        android:allowBackup="true"
+        android:icon="@drawable/sharp_icon"
+        android:label="@string/app_name"
+        android:theme="@style/style_rs_2" >
+        <activity
+            android:name="com.sharp.sharplauncher.activity.StartActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.MONKEY" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.sharp.sharplauncher.activity.HomeActivity" >
+        </activity>
+        <activity android:name="com.sharp.sharplauncher.activity.TodayNewsActivity" >
+        </activity>
+        <activity android:name="com.sharp.sharplauncher.activity.VideoPlayActivity" >
+        </activity>
+        <activity android:name="com.sharp.sharplauncher.activity.VideoActivity" >
+        </activity>
+        <activity android:name="com.sharp.sharplauncher.activity.VideoGridActivity" >
+        </activity>
+        <activity android:name="com.sharp.sharplauncher.activity.VideoMoreDetailActivity" >
+        </activity>
+        <activity android:name="com.sharp.sharplauncher.activity.TvLiveActivity" >
+        </activity>
+        <activity android:name="com.sharp.sharplauncher.activity.ApplicationActivity" >
+        </activity>
+        <activity android:name="com.sharp.sharplauncher.activity.ShowImageActivity" >
+        </activity>
+        <activity android:name="com.sharp.sharplauncher.activity.GameCenterActivity" >
+        </activity>
+        <activity android:name="com.sharp.sharplauncher.activity.HomeApplicationActivity" >
+        </activity>
+        <activity android:name="com.sharp.sharplauncher.activity.ShortCutActivity" >
+        </activity>
+        <activity android:name="com.sharp.sharplauncher.activity.PersonCenterActivity" >
+        </activity>
+        <activity android:name="com.sharp.sharplauncher.activity.TvListBackActivity" >
+        </activity>
+        <activity android:name="com.sharp.sharplauncher.activity.SettingActivity" >
+        </activity>
+        <activity android:name="com.sharp.sharplauncher.activity.VideoCarouselActivity" >
+        </activity>
+        <activity android:name="com.sharp.sharplauncher.activity.HDBeautyPhotoActivity" >
+        </activity>
+        <activity android:name="com.sharp.sharplauncher.activity.MusicListenActivity" >
+        </activity>
+        <activity android:name="com.sharp.sharplauncher.activity.AppInstallOrUpdateActivity" >
+        </activity>
+        <activity android:name="com.sharp.sharplauncher.activity.MyAppInstallActivity" >
+        </activity>
+        
+        <activity android:name="com.sharp.sharplauncher.activity.VideoMorePlayActivity" >
+        </activity>
+        <activity android:name="com.sharp.sharplauncher.activity.ShowMoreImageActivity" >
+        </activity>
+        
+
+        <!-- 个人中心页面 -->
+         <activity android:name="com.sharp.sharplauncher.activity.HomeDelApplicationActivity" >
+        </activity>
+        <activity android:name="com.android.userswitch.UserMainActivity" >
+        </activity>
+        <activity android:name="com.android.userswitch.UserLoginActivity" >
+        </activity>
+        <activity android:name="com.android.user.regiester.UserRegisterActivity" >
+        </activity>
+        <activity android:name="com.android.user.regiester.UserRegisterGetCodeActivity" >
+        </activity>
+        <activity android:name="com.android.user.regiester.UserInfoActivity" >
+        </activity>
+        <activity
+            android:name="com.android.user.regiester.UserAgreement"
+            android:theme="@style/Theme.Base.AppCompat.Light.DarkActionBar" >
+        </activity>
+        <activity android:name="com.android.password.ToFindPassWords" >
+        </activity>
+        <activity android:name="com.android.password.ToGetCodeForMoblie" >
+        </activity>
+        <activity android:name="com.android.password.ToSetNewPassWord" >
+        </activity>
+        <!-- about to share -->
+        <activity
+            android:name="cn.sharesdk.framework.AuthorizeActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <!-- <activity android:name="com.yangyu.activity.AuthActivity" > -->
+        <!-- </activity> -->
+        <activity
+            android:name="cn.sharesdk.onekeyshare.ShareAllGird"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="cn.sharesdk.onekeyshare.SharePage"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <meta-data
+            android:name="QZoneWebShareAdapter"
+            android:value="cn.sharesdk.demo.MyQZoneWebShareAdapter" />
+
+        <!--
+            Dropbox的SSO功能需要在此处添加一个对ACTION_VIEW事件的过滤器，其中的scheme是
+            “db-”前缀再开发者应用的加上appKey。如果此过滤器不设置，则不能完成SSO功能授权
+        -->
+        <intent-filter>
+            <data android:scheme="db-7janx53ilz11gbs" />
+
+            <action android:name="android.intent.action.VIEW" />
+
+            <category android:name="android.intent.category.BROWSABLE" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </application>
+
+</manifest>
